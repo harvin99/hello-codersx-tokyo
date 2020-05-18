@@ -17,8 +17,10 @@
     <form action="/todo" method="POST">
       <%- include('_form_todo_field') %>
     </form>
-    <ul class="list">
-      
+    <ul class="list mt-4">
+      <% list.forEach(task => { %>
+        <li><%= task.task %> </li>
+      <%}) %>
     </ul>
   </body>
 </html>

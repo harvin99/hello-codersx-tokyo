@@ -16,11 +16,12 @@ app.get("/", (req, res) => {
   res.render('index');
 });
 app.get("/todo", (req, res) => {
-  res.render('todo')
+  res.render('todo', {list: toDoList})
 })
 app.post("/todo", (req, res) => {
-  
-  res.redirect('/todo')
+  console.log(req.body.task)
+  toDoList.push(req.body.task)
+  res.render('todo', {list: toDoList})
 })
 // listen for requests :)
 app.listen(process.env.PORT, () => {
