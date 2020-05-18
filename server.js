@@ -19,7 +19,6 @@ app.get("/todo", (req, res) => {
   res.render('todo', {list: toDoList})
 })
 app.post("/todo", (req, res) => {
-  console.log(req.body.task)
   toDoList.push(req.body.task)
   res.render('todo', {list: toDoList})
 })

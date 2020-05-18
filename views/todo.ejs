@@ -13,13 +13,13 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <h1>This is ToDo Page</h1>
+    <h1 class="text-center">This is ToDo Page</h1>
     <form action="/todo" method="POST">
       <%- include('_form_todo_field') %>
     </form>
     <ul class="list mt-4">
       <% list.forEach(task => { %>
-        <li><%= task.task %> </li>
+        <li><%= task %> </li>
       <%}) %>
     </ul>
   </body>
