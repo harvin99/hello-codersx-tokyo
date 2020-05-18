@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A cool thing made with Glitch">
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- import the webpage's client-side javascript file -->
     <script src="/script.js" defer></script>
   </head>
   <body>
     <h1>This is ToDo Page</h1>
-    <div class="glitchButton" style="position:fixed;top:2em;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
+    <form action="/todo" method="POST">
+      <%- include('_form_todo_field') %>
+    </form>
+    <ul class="list">
+      
+    </ul>
   </body>
 </html>

@@ -8,6 +8,7 @@ const app = express();
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.set("view engine", "ejs");
+app.use(express.urlencoded({extended: false }))
 
 const toDoList = []
 
@@ -18,6 +19,7 @@ app.get("/todo", (req, res) => {
   res.render('todo')
 })
 app.post("/todo", (req, res) => {
+  
   res.redirect('/todo')
 })
 // listen for requests :)
